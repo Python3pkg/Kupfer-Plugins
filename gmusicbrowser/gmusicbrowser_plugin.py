@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 
 __kupfer_name__ = _("gmusicbrowser")
 __kupfer_sources__ = ("GmusicbrowserSource", )

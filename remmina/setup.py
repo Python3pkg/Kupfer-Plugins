@@ -8,7 +8,7 @@ from setuptools.command.install import install
 try:
     from configparser import ConfigParser  # @UnusedImport
 except:
-    from ConfigParser import ConfigParser  # @UnresolvedImport @Reimport
+    from configparser import ConfigParser  # @UnresolvedImport @Reimport
 
 plugin_module = 'remmina'
 plugin_path = path.dirname(path.abspath(__file__))
@@ -21,11 +21,11 @@ class CopyPlugin(install):
         data_home = environ.get("XDG_DATA_HOME", default_data_home)
         dirs = [data_home, "kupfer", "plugins"]
         install_path = path.expanduser(path.join(*dirs))
-        print("mkdir {}".format(install_path))
+        print(("mkdir {}".format(install_path)))
         call("mkdir -p {}".format(install_path), shell=True)
 
         plugin_file = path.join(plugin_path, plugin_module + '.py')
-        print("Copy {} to {}".format(plugin_file, install_path))
+        print(("Copy {} to {}".format(plugin_file, install_path)))
         call("cp -p {} {}".format(plugin_file, install_path), shell=True)
 
 

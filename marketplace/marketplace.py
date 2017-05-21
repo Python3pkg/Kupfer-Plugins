@@ -30,7 +30,7 @@ from kupfer import uiutils, task
 from kupfer.objects import Action
 from kupfer.objects import Source
 try:
-    import xmlrpclib
+    import xmlrpc.client
 except ImportError:
     import xmlrpc.client as xmlrpclib
 
@@ -93,7 +93,7 @@ class MarketplaceSource(Source):
     
     def get_items(self):
         uri = __kupfer_settings__["marketplace_index"]
-        self.resource = self.resource or xmlrpclib.ServerProxy(uri)
+        self.resource = self.resource or xmlrpc.client.ServerProxy(uri)
         if not self.resource is None:
             keywords = __kupfer_settings__["marketplace_keywords"]
             for obj in self.resource.search(

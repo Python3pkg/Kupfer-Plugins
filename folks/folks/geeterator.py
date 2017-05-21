@@ -12,7 +12,7 @@ class _GeeIterator(object):
     def __iter__(self):
         it = self.it
         while it and it.has_next():
-            it.next()
+            next(it)
             yield it
         raise StopIteration    
 

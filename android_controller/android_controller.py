@@ -25,7 +25,7 @@ class DeviceLeaf(Leaf):
         Leaf.__init__(self, obj, "Android " + obj[0])
 
     def get_actions(self):
-        for key in KEY_NAMES.keys():
+        for key in list(KEY_NAMES.keys()):
             yield KeyAction(key)
 
 
@@ -101,7 +101,7 @@ class SendToMobile(Action):
     def _contact_to_android(self, obj):
         suffix = ['-a', 'android.intent.action.INSERT']
         suffix += ['-t', 'vnd.android.cursor.dir/person']
-        for k, v in obj.items():
+        for k, v in list(obj.items()):
             if v and not k.startswith('_'):
                 if isinstance(v, str):
                     suffix += [
@@ -111,7 +111,7 @@ class SendToMobile(Action):
                         )
                     ]
                 elif hasattr(v, 'keys'):
-                    for kk, vv in v.items():
+                    for kk, vv in list(v.items()):
                         suffix += [
                             '-e', kk.lower(),
                             "'{}'".format(

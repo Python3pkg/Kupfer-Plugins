@@ -56,7 +56,7 @@ class _PyGO_CAPI(object):
 ################################################################################
 # GType
 ################################################################################
-INT, ADDRESS, NONE, NOT_IMPLEMENTED = range(4)
+INT, ADDRESS, NONE, NOT_IMPLEMENTED = list(range(4))
 
 G_PY_INT = {
     (GO.TYPE_BOOLEAN,   pyc.c_bool),

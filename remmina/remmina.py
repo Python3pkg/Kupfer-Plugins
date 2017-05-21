@@ -1,9 +1,9 @@
 # -*- coding: UTF-8 -*-
-__author__ = u"Hugo Sena Ribeiro <hugosenari gmail com>"
+__author__ = "Hugo Sena Ribeiro <hugosenari gmail com>"
 __description__ = _("""Start remmina sessions""")
-__kupfer_actions__ = (u"RemminaConnect",)
-__kupfer_name__ = _(u"Remmina")
-__kupfer_sources__ = (u"ReminaHostServiceSource",)
+__kupfer_actions__ = ("RemminaConnect",)
+__kupfer_name__ = _("Remmina")
+__kupfer_sources__ = ("ReminaHostServiceSource",)
 __version__ = "0.1.2"
 
 from kupfer import pretty, utils

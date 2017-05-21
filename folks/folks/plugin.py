@@ -14,12 +14,12 @@ class FolksContact(contacts.ContactLeaf):
         email_addresses = slots.get('email_addresses', None)
         im_addresses = slots.get('im_addresses', None)
         if email_addresses:
-            slots[contacts.EMAIL_KEY] = next(iter(email_addresses.values()))
+            slots[contacts.EMAIL_KEY] = next(iter(list(email_addresses.values())))
         elif im_addresses:
-            slots[contacts.EMAIL_KEY] = next(iter(im_addresses.values()))
+            slots[contacts.EMAIL_KEY] = next(iter(list(im_addresses.values())))
         phone_numbers = slots.get('phone_numbers', None)
         if phone_numbers:
-            slots[contacts.PHONE_KEY] = next(iter(phone_numbers.values()))
+            slots[contacts.PHONE_KEY] = next(iter(list(phone_numbers.values())))
         contacts.ContactLeaf.__init__(self, slots, obj.get_display_name(), None)
     
     def get_description(self):
@@ -35,7 +35,7 @@ class FolksSource(Source):
         self.cached_items = None
     
     def get_items(self):
-        for contact in self.folks.values():
+        for contact in list(self.folks.values()):
             yield contact
     
     def on_change(self, agg, changes):
@@ -71,7 +71,7 @@ class EmailSource(Source):
         yield TextLeaf
 
     def get_items(self):
-        for i, email in self.resource.items():
+        for i, email in list(self.resource.items()):
             yield TextLeaf(email)
 
 
@@ -88,7 +88,7 @@ class NewMailAction(Action):
         yield FolksContact
 
     def valid_for_item(self, leaf):
-        print('email_addresses' in leaf.object, leaf.object)
+        print(('email_addresses' in leaf.object, leaf.object))
         return 'email_addresses' in leaf.object
 
     def get_icon_name(self):

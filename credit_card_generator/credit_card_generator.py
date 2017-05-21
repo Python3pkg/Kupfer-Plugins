@@ -204,7 +204,7 @@ class GenCCSource (ToplevelGroupingSource):
         generator = Random()
         generator.seed()
         
-        for name, params in GenCCSource.CARD_TYPES.items():
+        for name, params in list(GenCCSource.CARD_TYPES.items()):
             cards = credit_card_number(generator, *params)
             for card in cards:
                 yield TextLeaf(card, name)

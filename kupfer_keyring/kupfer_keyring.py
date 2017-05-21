@@ -22,13 +22,13 @@ def val_of_first(keys, attr):
 def user_name(obj):
     keys = ('username', 'user', 'login', 'email', 'e-mail')
     attr = obj.get_attributes()
-    return val_of_first(keys, attr) or u''
+    return val_of_first(keys, attr) or ''
 
 
 def service_name(obj):
     keys = ('service', 'application', 'xdg:schema')
     attr = obj.get_attributes()
-    return val_of_first(keys, attr) or u'unknown'
+    return val_of_first(keys, attr) or 'unknown'
 
 
 class KeyLeaf(Leaf):

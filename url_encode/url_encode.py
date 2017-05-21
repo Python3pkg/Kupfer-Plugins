@@ -5,7 +5,7 @@ __description__ = _("""Decode and encode actions for kupfer""")
 __kupfer_actions__ = ("URLEncode", "URLDecode")
 
 
-import urllib
+import urllib.request, urllib.parse, urllib.error
 from kupfer.objects import Action, UrlLeaf, TextLeaf
 
 
@@ -16,7 +16,7 @@ class URLEncode(Action):
     def activate(self, obj):
         result = ''
         try:
-            result = urllib.quote(obj.object.encode('utf8'))
+            result = urllib.parse.quote(obj.object.encode('utf8'))
         except AttributeError:
             result = urllib.parse.quote(obj.object.encode('utf8'))
         return TextLeaf(result)
@@ -35,7 +35,7 @@ class URLDecode(Action):
     def activate(self, obj):
         result = ''
         try:
-            result = urllib.unquote(obj.object)
+            result = urllib.parse.unquote(obj.object)
         except AttributeError:
             result = urllib.parse.unquote(obj.object)
         return TextLeaf(result)

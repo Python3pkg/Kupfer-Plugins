@@ -53,12 +53,12 @@ class SmileySource (Source):
     
     def _values(self, line):
         if line\
-            and u'.png' in line\
-            and not line.startswith(u'#')\
-            and not line.startswith(u'[')\
-            and not line.startswith(u'Icon=')\
-            and not line.startswith(u'Icon ='):
-            values = line.lstrip(u'!').split()
+            and '.png' in line\
+            and not line.startswith('#')\
+            and not line.startswith('[')\
+            and not line.startswith('Icon=')\
+            and not line.startswith('Icon ='):
+            values = line.lstrip('!').split()
             if len(values) > 1:
                 return values
         return None
@@ -73,7 +73,7 @@ class SmileyLeaf (TextLeaf):
     def __init__(self, img, key, names):
         TextLeaf.__init__(self,
             key,
-            u' '.join(names)
+            ' '.join(names)
         )
         self._img = img
 

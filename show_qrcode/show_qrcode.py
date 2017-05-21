@@ -10,7 +10,7 @@ __description__ = _("Display text as QRCode in a window")
 __version__ = "0.1.2"
 __author__ = "Thomas Renard <cybaer42@web.de>"
 
-import StringIO
+import io
 
 import gtk
 import qrencode
@@ -91,7 +91,7 @@ def qrcode_txt(leaf):
     return trasnlator(leaf)
 
 def qrcode_img(text):
-    image_file = StringIO.StringIO()
+    image_file = io.StringIO()
     image = qrencode.encode_scaled(text, size=300)[2]
     image.save(image_file, "ppm")
     image_contents = image_file.getvalue()

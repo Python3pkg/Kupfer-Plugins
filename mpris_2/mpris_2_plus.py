@@ -26,7 +26,7 @@ __kupfer_settings__ = PluginSettings(
         "label": _("Default player"),
         "type": str,
         "value": "None",
-        "alternatives": SomePlayers.get_dict().values()
+        "alternatives": list(SomePlayers.get_dict().values())
     }
 )
 #[player_name.split('.')[-1] for player_name in get_players_uri()]

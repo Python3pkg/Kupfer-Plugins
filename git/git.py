@@ -399,7 +399,7 @@ def git_root(file_path):
     '''Return git root dir name'''
     rev_parse = git.bake('rev-parse')
     roots = rev_parse('--show-toplevel', _cwd=dir_path(file_path))
-    return fil_clean_output(roots).next()
+    return next(fil_clean_output(roots))
 
 
 def git_is_repo_dir(file_path):
@@ -407,7 +407,7 @@ def git_is_repo_dir(file_path):
     rev_parse = git.bake('rev-parse')
     try:
         roots = rev_parse('--show-toplevel', _cwd=dir_path(file_path))
-        return bool(fil_clean_output(roots).next())
+        return bool(next(fil_clean_output(roots)))
     except Exception as e:
         return False
 

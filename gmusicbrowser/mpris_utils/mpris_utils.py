@@ -357,70 +357,70 @@ if __name__ == "__main__":
     players = Mpris_Utils.get_players()
     for player in players:
         #player = Mpris_Player("")
-        print "#####"
-        print 'player.friendly_name()'
-        print player.friendly_name()
-        print 'player.hasNext()'
-        print player.hasNext()
-        print 'player.hasPrev()'
-        print player.hasPrev()
-        print 'player.flags()'
-        print player.flags()
+        print("#####")
+        print('player.friendly_name()')
+        print(player.friendly_name())
+        print('player.hasNext()')
+        print(player.hasNext())
+        print('player.hasPrev()')
+        print(player.hasPrev())
+        print('player.flags()')
+        print(player.flags())
         track = player.current_track()
-        print 'track.id()'
-        print track.id()
-        print 'track.lenght()'
-        print track.lenght()
-        print 'track.uri()'
-        print track.uri()
-        print 'track.data'
-        print track.data
-        print "#####"
-        print 'track.get_info(Mpris_Track.INFO_ALBUM)'
-        print track.get_info(Mpris_Track.INFO_ALBUM)
-        print 'track.get_info(Mpris_Track.INFO_ALBUM_ARTIST)'
-        print track.get_info(Mpris_Track.INFO_ALBUM_ARTIST)
-        print 'track.get_info(Mpris_Track.INFO_ARTIST)'
-        print track.get_info(Mpris_Track.INFO_ARTIST)
-        print 'track.get_info(Mpris_Track.INFO_LENGTH)'
-        print track.get_info(Mpris_Track.INFO_LENGTH)
-        print 'track.get_info(Mpris_Track.INFO_URL)'
-        print track.get_info(Mpris_Track.INFO_URL)
-        print 'track.get_info(Mpris_Track.INFO_TRACKID)'
-        print track.get_info(Mpris_Track.INFO_TRACKID)
-        print 'track.get_info(Mpris_Track.INFO_USER_RATING)'
-        print track.get_info(Mpris_Track.INFO_USER_RATING)
-        print 'track.get_info(Mpris_Track.INFO_TRACK_NUMBER)'
-        print track.get_info(Mpris_Track.INFO_TRACK_NUMBER)
-        print 'track.get_info(Mpris_Track.INFO_USE_COUNT)'
-        print track.get_info(Mpris_Track.INFO_USE_COUNT)
-        print 'track.get_info(Mpris_Track.INFO_TITLE)'
-        print track.get_info(Mpris_Track.INFO_TITLE)
-        print 'track.get_info(Mpris_Track.INFO_LYRICIST)'
-        print track.get_info(Mpris_Track.INFO_LYRICIST)
-        print 'track.get_info(Mpris_Track.INFO_LAST_USED)'
-        print track.get_info(Mpris_Track.INFO_LAST_USED)
-        print 'track.get_info(Mpris_Track.INFO_GENRE)'
-        print track.get_info(Mpris_Track.INFO_GENRE)
-        print 'track.get_info(Mpris_Track.INFO_FIRST_USED)'
-        print track.get_info(Mpris_Track.INFO_FIRST_USED)
-        print 'track.get_info(Mpris_Track.INFO_DISC_NUMBER)'
-        print track.get_info(Mpris_Track.INFO_DISC_NUMBER)
-        print 'track.get_info(Mpris_Track.INFO_CONTENT_CREATED)'
-        print track.get_info(Mpris_Track.INFO_CONTENT_CREATED)
-        print 'track.get_info(Mpris_Track.INFO_COMPOSER)'
-        print track.get_info(Mpris_Track.INFO_COMPOSER)
-        print 'track.get_info(Mpris_Track.INFO_COMMENT)'
-        print track.get_info(Mpris_Track.INFO_COMMENT)
-        print 'track.get_info(Mpris_Track.INFO_AUTO_RATING)'
-        print track.get_info(Mpris_Track.INFO_AUTO_RATING)
-        print 'track.get_info(Mpris_Track.INFO_AUDIO_BPM)'
-        print track.get_info(Mpris_Track.INFO_AUDIO_BPM)
-        print 'track.get_info(Mpris_Track.INFO_AS_TEXT)'
-        print track.get_info(Mpris_Track.INFO_AS_TEXT)
-        print 'track.get_info(Mpris_Track.INFO_ART_URI)'
-        print track.get_info(Mpris_Track.INFO_ART_URI)
-        print "#####"
+        print('track.id()')
+        print(track.id())
+        print('track.lenght()')
+        print(track.lenght())
+        print('track.uri()')
+        print(track.uri())
+        print('track.data')
+        print(track.data)
+        print("#####")
+        print('track.get_info(Mpris_Track.INFO_ALBUM)')
+        print(track.get_info(Mpris_Track.INFO_ALBUM))
+        print('track.get_info(Mpris_Track.INFO_ALBUM_ARTIST)')
+        print(track.get_info(Mpris_Track.INFO_ALBUM_ARTIST))
+        print('track.get_info(Mpris_Track.INFO_ARTIST)')
+        print(track.get_info(Mpris_Track.INFO_ARTIST))
+        print('track.get_info(Mpris_Track.INFO_LENGTH)')
+        print(track.get_info(Mpris_Track.INFO_LENGTH))
+        print('track.get_info(Mpris_Track.INFO_URL)')
+        print(track.get_info(Mpris_Track.INFO_URL))
+        print('track.get_info(Mpris_Track.INFO_TRACKID)')
+        print(track.get_info(Mpris_Track.INFO_TRACKID))
+        print('track.get_info(Mpris_Track.INFO_USER_RATING)')
+        print(track.get_info(Mpris_Track.INFO_USER_RATING))
+        print('track.get_info(Mpris_Track.INFO_TRACK_NUMBER)')
+        print(track.get_info(Mpris_Track.INFO_TRACK_NUMBER))
+        print('track.get_info(Mpris_Track.INFO_USE_COUNT)')
+        print(track.get_info(Mpris_Track.INFO_USE_COUNT))
+        print('track.get_info(Mpris_Track.INFO_TITLE)')
+        print(track.get_info(Mpris_Track.INFO_TITLE))
+        print('track.get_info(Mpris_Track.INFO_LYRICIST)')
+        print(track.get_info(Mpris_Track.INFO_LYRICIST))
+        print('track.get_info(Mpris_Track.INFO_LAST_USED)')
+        print(track.get_info(Mpris_Track.INFO_LAST_USED))
+        print('track.get_info(Mpris_Track.INFO_GENRE)')
+        print(track.get_info(Mpris_Track.INFO_GENRE))
+        print('track.get_info(Mpris_Track.INFO_FIRST_USED)')
+        print(track.get_info(Mpris_Track.INFO_FIRST_USED))
+        print('track.get_info(Mpris_Track.INFO_DISC_NUMBER)')
+        print(track.get_info(Mpris_Track.INFO_DISC_NUMBER))
+        print('track.get_info(Mpris_Track.INFO_CONTENT_CREATED)')
+        print(track.get_info(Mpris_Track.INFO_CONTENT_CREATED))
+        print('track.get_info(Mpris_Track.INFO_COMPOSER)')
+        print(track.get_info(Mpris_Track.INFO_COMPOSER))
+        print('track.get_info(Mpris_Track.INFO_COMMENT)')
+        print(track.get_info(Mpris_Track.INFO_COMMENT))
+        print('track.get_info(Mpris_Track.INFO_AUTO_RATING)')
+        print(track.get_info(Mpris_Track.INFO_AUTO_RATING))
+        print('track.get_info(Mpris_Track.INFO_AUDIO_BPM)')
+        print(track.get_info(Mpris_Track.INFO_AUDIO_BPM))
+        print('track.get_info(Mpris_Track.INFO_AS_TEXT)')
+        print(track.get_info(Mpris_Track.INFO_AS_TEXT))
+        print('track.get_info(Mpris_Track.INFO_ART_URI)')
+        print(track.get_info(Mpris_Track.INFO_ART_URI))
+        print("#####")
         #player.pause()
         #player.play()
         #player.focus()

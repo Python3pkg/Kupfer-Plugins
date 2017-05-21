@@ -1,6 +1,6 @@
 #-*- coding: UTF-8 -*-
 ## baseado no código do plugin para twitter
-from __future__ import absolute_import
+
 __kupfer_name__ = _('k2e')
 __kupfer_sources__ = ('ProjectsSource', 'ExecutesSource', 'MvnSource')
 __kupfer_actions__ = ('Run', 'Debug', 'Open', 'Close', 'Test', 'Mvn')

@@ -27,7 +27,7 @@ __kupfer_settings__ = PluginSettings(
         "label": _("Default player"),
         "type": str,
         "value": "None",
-        "alternatives": SomePlayers.get_dict().values()
+        "alternatives": list(SomePlayers.get_dict().values())
     }
 )
 
@@ -134,7 +134,7 @@ class Mpris2Source (Source):
     def get_items(self):
         _self = Mpris2Source.instance
         if Mpris2Source.get_appleaf_instance:
-            for action in _self.actions_available.values():
+            for action in list(_self.actions_available.values()):
                 yield ComposedLeaf(_self.appleaf_instance, action)
 
     def provides(self):

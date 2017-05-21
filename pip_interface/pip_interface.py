@@ -45,7 +45,7 @@ def convert_param(name):
 
 def get_params():
     params = []
-    for key, val in __kupfer_settings__.items():
+    for key, val in list(__kupfer_settings__.items()):
         param = convert_param(key)
         if val:
             params.append(param)

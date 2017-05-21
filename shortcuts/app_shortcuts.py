@@ -57,7 +57,7 @@ class ShortcutSources (ToplevelGroupingSource):
 class ShortcutLeaf (Leaf):
     """ Leaf represent shortcut"""
     def __init__(self, shortcut):
-        Leaf.__init__(self, shortcut, _(u" %s (%s)" % (shortcut["desc"], shortcut["keys"])))
+        Leaf.__init__(self, shortcut, _(" %s (%s)" % (shortcut["desc"], shortcut["keys"])))
         self.desc = shortcut["desc"]
         
     def get_actions(self):
@@ -67,10 +67,10 @@ class ShortcutLeaf (Leaf):
         return self.object["keys"]
     
     def get_decription(self):
-        return u"%s" % (self.object["desc"])
+        return "%s" % (self.object["desc"])
 
     def get_text_representation(self):
-        return u"%s (%s)" % (self.object["desc"], self.object["keys"])
+        return "%s (%s)" % (self.object["desc"], self.object["keys"])
 
     def get_icon_name(self):
         return "key_bindings"
